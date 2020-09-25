@@ -1,0 +1,25 @@
+% Copyright 2020 by Ch. Demko
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+
+\DeclareOptionBeamer{pagenumber}[]{\setbeamertemplate{page number in head/foot}[totalframenumber]}
+
+\IfFileExists{raleway.sty}{\usepackage{raleway}}{
+  \IfFileExists{verdana.sty}{\usepackage{verdana}}{}
+} % Load raleway or verdana font
+
+\mode<presentation>
+
+\useinnertheme[shadow=true]{rounded}
+\useoutertheme{shadow}
+\usecolortheme{LaRochelle}
+\usefonttheme{LaRochelle}
+
+\ProcessOptionsBeamer
+
+\mode<all>
+
