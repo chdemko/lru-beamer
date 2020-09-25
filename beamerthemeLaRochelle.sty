@@ -7,6 +7,7 @@
 %
 
 \DeclareOptionBeamer{pagenumber}[]{\setbeamertemplate{page number in head/foot}[totalframenumber]}
+\DeclareOptionBeamer{logo}[1]{\logo{\includegraphics[height=#1]{logo.pdf}}}
 
 \IfFileExists{raleway.sty}{\usepackage{raleway}}{
   \IfFileExists{verdana.sty}{\usepackage{verdana}}{}
@@ -14,8 +15,8 @@
 
 \mode<presentation>
 
-\useinnertheme[shadow=true]{rounded}
-\useoutertheme{shadow}
+\useinnertheme{rounded}
+\useoutertheme{split}
 \usecolortheme{LaRochelle}
 \usefonttheme{LaRochelle}
 
