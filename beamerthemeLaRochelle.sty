@@ -6,17 +6,14 @@
 % 2. under the BSD 3-Clause License.
 %
 
-\graphicspath{{./}}
-
 \DeclareOptionBeamer{pagenumber}[]{\setbeamertemplate{page number in head/foot}[totalframenumber]}
-\DeclareOptionBeamer{logo}[1]{\logo{\includegraphics[height=#1]{logo-LaRochelle.pdf}}}
 
 \IfFileExists{verdana.sty}{\usepackage{verdana}}{}
 
 \mode<presentation>
 
 \useinnertheme{rounded}
-\useoutertheme{split}
+\useoutertheme{LaRochelle}
 \usecolortheme{LaRochelle}
 \usefonttheme{LaRochelle}
 
