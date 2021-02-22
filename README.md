@@ -6,13 +6,11 @@ Usage:
 \usetheme{LaRochelle}
 ~~~
 
-or use any of these two options:
+or use any of this option:
 
 ~~~latex
-\usetheme[pagenumber,logo=size]{LaRochelle}
+\usetheme[pagenumber]{LaRochelle}
 ~~~
-
-where `size` is a valid LaTeX size.
 
 The output of `template.tex` gives the `template.pdf` file.
 
