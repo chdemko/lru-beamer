@@ -6,7 +6,7 @@ Usage:
 \usetheme{LaRochelle}
 ~~~
 
-or use any of this option:
+or use this option:
 
 ~~~latex
 \usetheme[pagenumber]{LaRochelle}
