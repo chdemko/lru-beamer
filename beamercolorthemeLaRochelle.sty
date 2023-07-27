@@ -6,7 +6,7 @@
 % 2. under the BSD 3-Clause License.
 %
 
-\definecolor{LRU_MainBlue}{rgb}{0.059, 0.431, 0.694}
+\definecolor{LRU_MainBlue}{rgb}{0.224, 0.427, 0.749}
 
 \definecolor{LRU_Blue}{rgb}{0.502, 0.835, 0.89}
 \definecolor{LRU_Green}{rgb}{0.60, 0.831, 0.125}
@@ -16,10 +16,13 @@
 \definecolor{LRU_SecondaryPink}{rgb}{0.91, 0.318, 0.545}
 \definecolor{LRU_SecondaryGreen}{rgb}{0.298, 0.757, 0.514}
 \definecolor{LRU_SecondaryOrange}{rgb}{0.961, 0.439, 0.18}
+\definecolor{LRU_SecondaryGray}{rgb}{0.655, 0.706, 0.733}
+\definecolor{LRU_SecondaryViolet}{rgb}{0.702, 0.439, 0.686}
+\definecolor{LRU_SecondaryAbricot}{rgb}{0.976, 0.639, 0.051}
 
 \setbeamercolor{structure}{fg=LRU_MainBlue}
 \setbeamercolor{alerted text}{fg=LRU_SecondaryPink}
-\setbeamercolor{example text}{fg=LRU_Green}
+\setbeamercolor{example text}{fg=LRU_Green!80!black}
 
 \setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg}
 \setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=alerted text.fg}
@@ -29,13 +32,136 @@
 \setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!20!bg}
 \setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!20!bg}
 
+\usebeamercolor{block title}
+\colorlet{blocktitlefgsave}{block title.fg}
+\colorlet{blocktitlebgsave}{block title.bg}
+\usebeamercolor{normal text}
+\usebeamercolor{block body}
+\colorlet{blockbodyfgsave}{block body.fg}
+\colorlet{blockbodybgsave}{block body.bg}
+\usebeamercolor{normal text}
+\usebeamercolor{item}
+\colorlet{blockitembgsave}{item.bg}
+\usebeamercolor{normal text}
+\usebeamercolor{qed symbol}
+\colorlet{blockqedsave}{qed symbol.bg}
+\usebeamercolor{normal text}
+
+\usebeamercolor{block title example}
+\colorlet{exblocktitlefgsave}{block title example.fg}
+\colorlet{exblocktitlebgsave}{block title example.bg}
+\usebeamercolor{normal text}
+\usebeamercolor{block body example}
+\colorlet{exblockbodyfgsave}{block body example.fg}
+\colorlet{exblockbodybgsave}{block body example.bg}
+\usebeamercolor{normal text}
+
+% theorem
+\BeforeBeginEnvironment{theorem}{
+  \setbeamercolor{block title}{fg=white,bg=LRU_SecondaryBlue!80!black!100}
+  \setbeamercolor{block body}{fg=LRU_SecondaryBlue!80!black!100,bg=LRU_SecondaryBlue!20!white}
+  \setbeamercolor{itemize item}{bg=LRU_SecondaryBlue!80!black!100}
+}
+\AfterEndEnvironment{theorem}{
+  \setbeamercolor{block title}{fg=blocktitlefgsave,bg=blocktitlebgsave}
+  \setbeamercolor{block body}{fg=blockbodyfgsave,bg=blockbodybgsave}
+  \setbeamercolor{itemize item}{bg=blockitembgsave}
+}
+
+% corollary
+\BeforeBeginEnvironment{corollary}{
+  \setbeamercolor{block title}{fg=white,bg=LRU_SecondaryOrange}
+  \setbeamercolor{block body}{fg=LRU_SecondaryOrange, bg=LRU_SecondaryOrange!10!white}
+  \setbeamercolor*{item}{bg=LRU_SecondaryOrange}
+}
+\AfterEndEnvironment{corollary}{
+  \setbeamercolor{block title}{fg=blocktitlefgsave,bg=blocktitlebgsave}
+  \setbeamercolor{block body}{fg=blockbodyfgsave,bg=blockbodybgsave}
+  \setbeamercolor*{item}{bg=blockitembgsave}
+}
+
+% definition
+\BeforeBeginEnvironment{definition}{
+  \setbeamercolor{block title}{fg=white,bg=LRU_SecondaryGray!70!black!100}
+  \setbeamercolor{block body}{fg=LRU_SecondaryGray!70!black!100,bg=LRU_SecondaryGray!20!white}
+  \setbeamercolor*{item}{bg=LRU_SecondaryGray!70!black!100}
+}
+\AfterEndEnvironment{definition}{
+  \setbeamercolor{block title}{fg=blocktitlefgsave,bg=blocktitlebgsave}
+  \setbeamercolor{block body}{fg=blockbodyfgsave,bg=blockbodybgsave}
+  \setbeamercolor*{item}{bg=blockitembgsave}
+}
+
+% definitions
+\BeforeBeginEnvironment{definitions}{
+  \setbeamercolor{block title}{fg=white,bg=LRU_SecondaryGray!80!black!100}
+  \setbeamercolor{block body}{fg=LRU_SecondaryGray!80!black!100,bg=LRU_SecondaryGray!20!white}
+  \setbeamercolor*{item}{bg=LRU_SecondaryGray!80!black!100}
+}
+\AfterEndEnvironment{definitions}{
+  \setbeamercolor{block title}{fg=blocktitlefgsave,bg=blocktitlebgsave}
+  \setbeamercolor{block body}{fg=blockbodyfgsave,bg=blockbodybgsave}
+  \setbeamercolor*{item}{bg=blockitembgsave}
+}
+
+% fact
+\BeforeBeginEnvironment{fact}{
+  \setbeamercolor{block title}{fg=white,bg=LRU_SecondaryAbricot!90!black!100}
+  \setbeamercolor{block body}{fg=LRU_SecondaryAbricot!90!black!100,bg=LRU_SecondaryAbricot!20!white}
+  \setbeamercolor*{item}{bg=LRU_SecondaryAbricot!90!black!100}
+}
+\AfterEndEnvironment{fact}{
+  \setbeamercolor{block title}{fg=blocktitlefgsave,bg=blocktitlebgsave}
+  \setbeamercolor{block body}{fg=blockbodyfgsave,bg=blockbodybgsave}
+  \setbeamercolor*{item}{bg=blockitembgsave}
+}
+
+% example
+\BeforeBeginEnvironment{example}{
+  \setbeamercolor{block title example}{fg=white,bg=LRU_SecondaryGreen!80!black!100}
+  \setbeamercolor{block body example}{fg=LRU_SecondaryGreen!80!black!100,bg=LRU_SecondaryGreen!20!white}
+  \setbeamercolor*{item}{bg=LRU_SecondaryGreen!80!black!100}
+}
+\AfterEndEnvironment{example}{
+  \setbeamercolor{block title example}{fg=exblocktitlefgsave,bg=exblocktitlebgsave}
+  \setbeamercolor{block body example}{fg=exblockbodyfgsave,bg=exblockbodybgsave}
+  \setbeamercolor*{item}{bg=blockitembgsave}
+}
+
+% examples
+\BeforeBeginEnvironment{examples}{
+  \setbeamercolor{block title example}{fg=white,bg=LRU_SecondaryGreen!80!black!100}
+  \setbeamercolor{block body example}{fg=LRU_SecondaryGreen!80!black!100,bg=LRU_SecondaryGreen!20!white}
+  \setbeamercolor*{item}{bg=LRU_SecondaryGreen!80!black!100}
+}
+\AfterEndEnvironment{examples}{
+  \setbeamercolor{block title example}{fg=exblocktitlefgsave,bg=exblocktitlebgsave}
+  \setbeamercolor{block body example}{fg=exblockbodyfgsave,bg=exblockbodybgsave}
+  \setbeamercolor*{item}{bg=blockitembgsave}
+}
+
+% proof
+\BeforeBeginEnvironment{proof}{
+  \setbeamercolor{block title}{fg=white,bg=LRU_SecondaryViolet!80!black!100}
+  \setbeamercolor{block body}{fg=LRU_SecondaryViolet!80!black!100, bg=LRU_SecondaryViolet!10!white}
+  \setbeamercolor*{qed symbol}{bg=LRU_SecondaryViolet!80!black!100}
+  \setbeamercolor*{item}{bg=LRU_SecondaryViolet!80!black!100}
+}
+\AfterEndEnvironment{proof}{
+  \setbeamercolor{block title example}{fg=exblocktitlefgsave,bg=exblocktitlebgsave}
+  \setbeamercolor{block body example}{fg=exblockbodyfgsave,bg=exblockbodybgsave}
+  \setbeamercolor*{item}{bg=blockitembgsave}
+  \setbeamercolor*{qed symbol}{bg=blockqedsave}
+}
+
+% structure
 \setbeamercolor{palette primary}{use=structure,fg=white,bg=structure.fg}
 \setbeamercolor{palette secondary}{use=structure,fg=white,bg=structure.fg!75!black}
 \setbeamercolor{palette tertiary}{use=structure,fg=white,bg=structure.fg!50!black}
 \setbeamercolor{palette quaternary}{fg=black,bg=LRU_Yellow}
 
 \setbeamercolor{sidebar}{use=structure,bg=structure.fg}
-  
+
 \setbeamercolor{palette sidebar primary}{use=structure,fg=structure.fg!10}
 \setbeamercolor{palette sidebar secondary}{fg=white}
 \setbeamercolor{palette sidebar tertiary}{use=structure,fg=structure.fg!50}
