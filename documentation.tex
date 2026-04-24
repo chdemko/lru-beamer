@@ -1,0 +1,84 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+
+\title{beamerthemeLaRochelle}
+\author{La Rochelle University}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\texttt{beamerthemeLaRochelle} is a theme for the \texttt{beamer} class designed to create clean and modern presentations for La Rochelle University.
+
+\section{Installation}
+
+To use this theme, place the theme files in a directory accessible to \LaTeX{} or in the same folder as your document.
+
+\section{Usage}
+
+Load the theme in your document using:
+
+\begin{verbatim}
+\documentclass{beamer}
+\usetheme{LaRochelle}
+\end{verbatim}
+
+\section{Options}
+
+The theme provides one option:
+
+\subsection{\texttt{pagenumber}}
+
+This option controls whether page numbers are displayed in the footer.
+
+\begin{itemize}
+  \item \texttt{pagenumber=true} : displays page numbers
+  \item \texttt{pagenumber=false} : hides page numbers
+\end{itemize}
+
+Example usage:
+
+\begin{verbatim}
+\usetheme[pagenumber=true]{LaRochelle}
+\end{verbatim}
+
+The default value is:
+
+\begin{verbatim}
+pagenumber=false
+\end{verbatim}
+
+\section{Minimal Example}
+
+\begin{verbatim}
+\documentclass{beamer}
+
+\usetheme[pagenumber=true]{LaRochelle}
+
+\title{Title}
+\author{Author}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Example}
+Slide content
+\end{frame}
+
+\end{document}
+\end{verbatim}
+
+As example, The output of \texttt{example.tex} gives the \texttt{example.pdf} file.
+\section{License}
+
+This theme is distributed under the BSD 3-Clause License.
+
+\end{document}

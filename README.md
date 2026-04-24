@@ -12,5 +12,5 @@ or use this option:
 \usetheme[pagenumber]{LaRochelle}
 ~~~
 
-The output of `template.tex` gives the `template.pdf` file.
+The output of `example.tex` gives the `example.pdf` file.
 
