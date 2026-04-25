@@ -4,6 +4,7 @@ Usage:
 
 ~~~latex
 \usetheme{LaRochelle}
+\usepackage{raleway} % or verdana, DejaVuSans
 ~~~
 
 or use this option:
